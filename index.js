@@ -4,8 +4,8 @@ $(document).ready(function(){
       source : function(request,dataCallback) {
                   $.ajax({
                       method : "GET",
-                      url : "http://en.wikipedia.org//w/api.php?action=opensearch&format=json&origin=http%3A%2F%2Fkaruppiah7890.github.io&search=" + request.term + "&limit=10&formatversion=2",
-                      dataType : "json",
+                      url : "http://en.wikipedia.org//w/api.php?action=opensearch&format=json&search=" + request.term + "&limit=10&formatversion=2",
+                      dataType : "jsonp",
                       success : function(response) {
                         dataCallback(response[1]);
                       },
@@ -42,8 +42,8 @@ $(document).ready(function(){
 function searchWiki(query) {
   $.ajax({
     method : "GET",
-    url : "http://en.wikipedia.org/w/api.php?action=query&format=json&origin=http%3A%2F%2Fkaruppiah7890.github.io&list=search&formatversion=2&srsearch=" + query + "&srprop=snippet&srlimit=10",
-    dataType : "json",
+    url : "http://en.wikipedia.org/w/api.php?action=query&format=json&list=search&formatversion=2&srsearch=" + query + "&srprop=snippet&srlimit=10",
+    dataType : "jsonp",
     success : showResults,
     error : function(val) {
       console.log("Error occurred while fetching results for the query");
