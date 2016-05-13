@@ -3,7 +3,11 @@ $(document).ready(function(){
     $("#search_input").keyup(function(event){
         if(event.keyCode==13)
         searchWiki($("#search_input").val());
-    })
+    });
+
+    $("#search_go").on("click",function(){
+      searchWiki($("#search_input").val());
+    });
 });
 
 function searchWiki(query) {
