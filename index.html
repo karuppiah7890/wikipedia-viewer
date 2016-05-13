@@ -5,7 +5,7 @@
     <title>Wikipedia Viewer</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="animate.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
   </head>
@@ -13,18 +13,22 @@
     <div class="container-fluid">
       <div class="MyContent">
 
-        <div class="text-center">
+        <div class="text-md-center">
           <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Click here to see a random Wikipedia article</a>
         </div>
-        <br><br>
-        <div class="input-group input-group-lg">
-          <input type="text" class="form-control" placeholder="Search Wikipedia">
+        <br>
+        <div class="search-box input-group input-group-lg">
+          <input type="text" id="search_input" class="form-control" placeholder="Search Wikipedia">
           <div class="input-group-btn">
-            <button id="search-go" class="btn btn-default" type="button"><i class="fa fa-search fa-lg"></i></button>
+            <button type="button" id="search_go" class="btn btn-default"><i class="fa fa-search fa-lg"></i></button>
           </div>
+        </div>
+        <div id="search_results">
+
         </div>
 
       </div>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>

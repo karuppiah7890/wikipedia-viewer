@@ -1,3 +1,12 @@
 .MyContent {
-  padding: 200px 200px 0px 200px;
+  padding: 200px 200px 50px 200px;
+}
+
+.search-box {
+  padding-bottom: 30px;
+}
+
+.result, .result:focus , .result:hover {
+  text-decoration: none !important;
+  color : #000 !important
 }
