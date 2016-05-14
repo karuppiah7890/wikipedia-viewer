@@ -18,6 +18,7 @@ $(document).ready(function(){
       select : function(event,ui) {
                   if(event.keyCode!=13)
                   {
+                    $("#search_input").autocomplete("close");
                     //console.log("autocomplete event fired!");
                     searchWiki(ui.item.value);
                   }
@@ -34,6 +35,7 @@ $(document).ready(function(){
     });
 
     $("#search_go").on("click",function(){
+      $("#search_input").autocomplete("close");
       //console.log("button event fired");
       searchWiki($("#search_input").val());
     });
@@ -57,7 +59,7 @@ function searchWiki(query) {
 function showResults(response) {
 
     //console.log(response);
-
+    $("#search_input").autocomplete("close");
     var allResults = response.query.search;
 
     $(".MyContent").css("padding","30px 200px 50px 200px")
