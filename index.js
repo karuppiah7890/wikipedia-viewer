@@ -67,7 +67,7 @@ function showResults(response) {
     $("#search_input").autocomplete("close");
     var allResults = response.query.search;
 
-    $(".MyContent").css("padding","30px 200px 50px 200px")
+    $(".MyContent").css("padding","30px 200px 50px 200px");
     $(".card").remove();
 
     allResults.forEach(function(result){

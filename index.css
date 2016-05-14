@@ -1,5 +1,6 @@
 .MyContent {
-  padding: 200px 200px 50px 200px;
+  padding: 100px 200px 50px 200px;
+
 }
 
 .search-box {
@@ -9,4 +10,8 @@
 .result, .result:focus , .result:hover {
   text-decoration: none !important;
   color : #474747 !important
+}
+
+#wiki_logo {
+  margin-bottom: 0px;
 }
